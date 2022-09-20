@@ -3,7 +3,6 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
-//app.use('/api', createProxyMiddleware({ target: 'https://animechan.vercel.app', changeOrigin: true }));
 app.use('/search', createProxyMiddleware({ target: 'https://itunes.apple.com', changeOrigin: true }));
 
 
