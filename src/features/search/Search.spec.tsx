@@ -19,3 +19,4 @@ it('query formatter should correctly format query', () =>{
   expect(queryFormatter(' david bowie ')).toBe("?term=david+bowie&media=music");
 
 })
+

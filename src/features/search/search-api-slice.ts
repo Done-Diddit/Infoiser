@@ -1,12 +1,18 @@
 import { createApi , fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 
-interface info {
-
+export interface infoType {
     trackId: number
     wrapperType : string,
     artistName : string,
-    artworkUrl100 : string
+    artworkUrl100 : string,
+    longDescription : string
+}
+
+export interface dataType {
+
+    resultCount : number,
+    results : infoType[]
 }
 
 // https://itunes.apple.com/search?term=david+bowie&media=music
@@ -26,7 +32,7 @@ export const apiSlice = createApi({
      }),
      endpoints(builder){
         return {
-            fetchInfo : builder.query<info[],string>({
+            fetchInfo : builder.query<dataType,string>({
                 // generate rest of query
                 query(term:string){ return queryFormatter(term) }
             }) 

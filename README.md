@@ -1,3 +1,11 @@
+# Submission for technical test = P.Dilly
+
+Development server starts with  `npm start`
+
+Proxy api server starts with `node ./api/api.js`
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
