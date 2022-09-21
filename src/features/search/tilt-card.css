@@ -1,0 +1,98 @@
+/* compiled externally */
+
+body {
+    background: #444444;
+  }
+  
+  .container {
+    display: grid;
+    grid-gap: 1rem;
+    max-width: 100rem;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 100px auto;
+  }
+  
+  .card-holder {
+    grid-column: span 3;
+    min-height: 23rem;
+    max-height: 23rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  @media only screen and (max-width: 75em) {
+    .card-holder {
+      grid-column: span 4;
+    }
+  }
+  @media only screen and (max-width: 56.25em) {
+    .card-holder {
+      grid-column: span 12;
+    }
+  }
+  .card {
+    background: #282727;
+    text-align: center;
+    border: 1.5px solid rgba(21, 21, 21, 0.1);
+    border-radius: 0.8rem;
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .card-img-top {
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+  
+  .card-body {
+    min-height: 0;
+    padding: 0;
+  }
+  
+  .card-body--three-lines {
+    color: #f9f9f9;
+    margin: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
+  .card-footer {
+    background: #2a3736;
+    text-transform: uppercase;
+    border-radius: 0 0 0.8rem 0.8rem !important;
+  }
+  
+  .card--link-more {
+    color: #fff;
+  }
+  
+  .card--link-more :hover {
+    color: red;
+    transform: translateZ(20px);
+  }
+  
+  .card-icon {
+    color: #fff;
+    font-size: 3rem;
+    transform: translateZ(20px);
+  }
+  
+  .card-title {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    transform: translateZ(40px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }

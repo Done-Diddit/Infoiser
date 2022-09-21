@@ -2,7 +2,7 @@
 
 import React, { useState , useEffect , useCallback , useRef } from 'react';
 import { infoType } from './search-api-slice';
-import './tilt-card.scss';
+import './tilt-card.css';
 
 function setUpCard(card:any){
 
@@ -102,14 +102,17 @@ export function TiltCard(props:infoType) {
 
     // In your component you'll still recieve a `ref`, but it 
     // will be a callback function instead of a Ref Object
+   
     const [ref] = useHookWithRefCallback();
         
+    //ref={ref}
 
-    return <div className="card-holder" ref={ref}>
+    return <div className="card-holder" ref={ref}>  
             <div className="card mb-3">
                 <img className="card-img-top"
                     src={props.artworkUrl100}
-                    alt="Card image cap">
+                    alt="Card image cap"
+                    key={"img_" + props.trackId.toString()}>
                 </img>
                 <div className="card-img-overlay">
                     <div className="card-icon"><i className="fab fa-codepen"></i></div>
@@ -119,7 +122,7 @@ export function TiltCard(props:infoType) {
                     <p className="card-body--three-lines">{props.longDescription}</p>
                 </div>
                 <div className="card-footer">
-                    <div className="card--link-more" ref="#">
+                    <div className="card--link-more">
                         Find out more
                     </div>
                 </div>

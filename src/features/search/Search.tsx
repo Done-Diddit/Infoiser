@@ -30,7 +30,7 @@ export function Search(){
 
     var searchResults = (<div>
       {data && data.results.map((info) => (
-          <TiltCard {...info} />
+          <TiltCard {...info} key={info.trackId.toString()} />
       ))}
     </div>);
 
