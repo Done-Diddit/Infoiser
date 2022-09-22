@@ -33,8 +33,9 @@ export const apiSlice = createApi({
      endpoints(builder){
         return {
             fetchInfo : builder.query<dataType,string>({
+
                 // generate rest of query
-                query(term:string){ return queryFormatter(term) }
+                query(term:string){ return term ? queryFormatter(term) : '' }
             }) 
         }
      }
