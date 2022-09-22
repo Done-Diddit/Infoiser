@@ -28,6 +28,11 @@ export function Search(){
     const { data, isFetching } = useFetchInfoQuery(searchTerm);
     const [ hasResults, setPreSearch ] = useHasResults(data);
 
+
+
+
+
+
     const searchControl = (
         <div>
             <div>
@@ -64,7 +69,7 @@ export function Search(){
 
     const resultsControl = (
         <div>
-            {data && data.results.map((info) => (
+            {data && data.results.slice(0,10). map((info) => (
                 <TiltCard {...info} key={info.trackId.toString()} />
             ))}
         </div>
