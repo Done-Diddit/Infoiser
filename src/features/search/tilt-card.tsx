@@ -105,8 +105,6 @@ export function TiltCard(props:infoType) {
    
     const [ref] = useHookWithRefCallback();
         
-    //ref={ref}
-
     return <div className="card-holder" ref={ref}>  
             <div className="card mb-3">
                 <img className="card-img-top"
